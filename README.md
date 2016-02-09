@@ -7,7 +7,6 @@ Use [Leap Motion](https://www.leapmotion.com/) as a remote to control a robot. P
 
   * install the Leap Motion sdk: [https://developer.leapmotion.com/](https://developer.leapmotion.com/)
   * you need web browser supporting Array.observe ([http://caniuse.com/object-observe](http://caniuse.com/object-observe))
-  * (optionnal) http server: ```npm install -g http-server```
 
 
 ## Run it
@@ -16,7 +15,11 @@ Use [Leap Motion](https://www.leapmotion.com/) as a remote to control a robot. P
   git clone ssh://git@github.com:Pamplemousse/nodebots-leapmotion-remote.git
   cd nodebots-leapmotion-remote
 
-  # if you use http server
-  http-server
-  # open index.html in your browser otherwise
+  # install node modules
+  npm install
+
+  # run the server
+  ./node_modules/budo/bin/cmd.js app/main.js:js/bundle.js --live
   ```
+
+Debug info and display are available on <a href="http://localhost:9966" target="_blank">http://localhost:9966</a>.

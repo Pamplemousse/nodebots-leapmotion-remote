@@ -21,7 +21,7 @@ var hands$ = lastFrames$
   })
 
 hands$.subscribe(
-   function (hand) {
-     console.log(hand)
-   }
+  function (hand) {
+    console.log(hand)
+  }
 )

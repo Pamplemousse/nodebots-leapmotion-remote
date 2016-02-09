@@ -1,0 +1,22 @@
+{
+  "name": "leapmotion-remote",
+  "version": "1.0.0",
+  "description": "Use [Leap Motion](https://www.leapmotion.com/) as a remote to control a robot. Project started for [NodeBots in Wellington](http://nodebots.co.nz/).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pamplemousse/nodebots-leapmotion-remote.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pamplemousse/nodebots-leapmotion-remote/issues"
+  },
+  "homepage": "https://github.com/Pamplemousse/nodebots-leapmotion-remote#readme",
+  "devDependencies": {
+    "budo": "^8.0.4"
+  }
+}
