@@ -18,5 +18,10 @@
   "homepage": "https://github.com/Pamplemousse/nodebots-leapmotion-remote#readme",
   "devDependencies": {
     "budo": "^8.0.4"
+  },
+  "dependencies": {
+    "jquery": "^2.2.0",
+    "lodash": "^4.3.0",
+    "rx": "^4.0.7"
   }
 }

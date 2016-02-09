@@ -1,3 +1,7 @@
+var $ = require('jquery')
+var _ = require('lodash')
+var Rx = require('rx')
+
 var frames = []
 
 var frameChanges$ = Rx.Observable.ofArrayChanges(frames)
