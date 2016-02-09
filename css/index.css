@@ -4,3 +4,39 @@ body {
   padding: 0;
 }
 
+.container {
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.tile {
+  width: 100px;
+  height: 100px;
+}
+
+#up {
+  background-color: lightblue;
+  margin-left: 100px;
+}
+
+#down {
+  background-color: lightblue;
+  margin-left: 100px;
+}
+
+#left {
+  float: left;
+  background-color: lightblue;
+}
+
+#on-off {
+  float: left;
+  background-color: red;
+}
+
+#right {
+  margin-left: 200px;
+  background-color: lightblue;
+}
