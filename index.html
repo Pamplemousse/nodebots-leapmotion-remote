@@ -17,33 +17,5 @@
     later, there will be useful debug informations
 	</body>
 
-  <script>
-
-    var frames = [];
-
-    var frameChanges$ = Rx.Observable.ofArrayChanges(frames);
-    var lastFrames$ = frameChanges$
-      .map(function(frameChange) {
-        return _.last(frameChange.object);
-      });
-
-    var controller = Leap.loop({ enableGestures:true }, function(frame) {
-      frames.push(frame);
-    });
-
-    var hands$ = lastFrames$
-      .filter(function(frame) {
-        return !_.isEmpty(frame.hands)
-      })
-      .map(function(frame) {
-        return frame.hands[0];
-      });
-
-    hands$.subscribe(
-       function(hand) {
-         console.log(hand);
-       }
-    )
-
-  </script>
+  <script type="text/javascript" src="js/index.js"></script>
 </html>
