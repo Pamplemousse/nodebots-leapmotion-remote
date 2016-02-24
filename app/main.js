@@ -1,6 +1,7 @@
 var $ = require('jquery')
 var _ = require('lodash')
 var Rx = require('rx')
+var Leap = require('leapjs')
 
 var frames = []
 
