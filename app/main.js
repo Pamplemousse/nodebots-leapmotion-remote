@@ -25,8 +25,28 @@ var hands$ = lastFrames$
     return frame.hands[0]
   })
 
-hands$.subscribe(
+var noHands$ = lastFrames$
+  .filter(function (frame) {
+    return _.isEmpty(frame.hands)
+  })
+
+var leftHand$ = hands$
+  .filter(function (hand) {
+    return hand.type === 'left'
+  })
+
+leftHand$.subscribe(
   function (hand) {
-    console.log(hand)
+    var onOffTile = $('#on-off')
+    onOffTile.html('on')
+    onOffTile.css('background-color', 'green')
+  }
+)
+
+noHands$.subscribe(
+  function () {
+    var onOffTile = $('#on-off')
+    onOffTile.html('off')
+    onOffTile.css('background-color', 'red')
   }
 )
