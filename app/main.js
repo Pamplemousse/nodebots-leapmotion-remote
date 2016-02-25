@@ -1,4 +1,5 @@
 var hands = require('./hands.js')
+var directions = require('./directions.js')
 var tiles = require('./tiles.js')
 
 hands.leftHand$.subscribe(
@@ -17,70 +18,37 @@ hands.noHands$.subscribe(
   }
 )
 
-var forwardDirection$ = hands.leftHand$
-  .filter(function (hand) {
-    return hand.direction[1] < -0.20
-  })
-
-// Ugly, here only for display purposes
-var notForwardDirection$ = hands.leftHand$
-  .filter(function (hand) {
-    return hand.direction[1] > -0.20
-  })
-
-var rightDirection$ = hands.leftHand$
-  .filter(function (hand) {
-    return hand.direction[0] > 0.20
-  })
-
-// Ugly, here only for display purposes
-var notRightDirection$ = hands.leftHand$
-  .filter(function (hand) {
-    return hand.direction[0] < 0.20
-  })
-
-var leftDirection$ = hands.leftHand$
-  .filter(function (hand) {
-    return hand.direction[0] < -0.20
-  })
-
-// Ugly, here only for display purposes
-var notLeftDirection$ = hands.leftHand$
-  .filter(function (hand) {
-    return hand.direction[0] > -0.20
-  })
-
-forwardDirection$.subscribe(
+directions.forward$.subscribe(
   function () {
     tiles.changeBackground('up', 'blue')
   }
 )
 
-notForwardDirection$.subscribe(
+directions.notForward$.subscribe(
   function () {
     tiles.changeBackground('up', 'lightblue')
   }
 )
 
-rightDirection$.subscribe(
+directions.right$.subscribe(
   function () {
     tiles.changeBackground('right', 'blue')
   }
 )
 
-notRightDirection$.subscribe(
+directions.notRight$.subscribe(
   function () {
     tiles.changeBackground('right', 'lightblue')
   }
 )
 
-leftDirection$.subscribe(
+directions.left$.subscribe(
   function () {
     tiles.changeBackground('left', 'blue')
   }
 )
 
-notLeftDirection$.subscribe(
+directions.notLeft$.subscribe(
   function () {
     tiles.changeBackground('left', 'lightblue')
   }
