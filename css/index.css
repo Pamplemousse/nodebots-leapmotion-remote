@@ -21,11 +21,6 @@ body {
   margin-left: 100px;
 }
 
-#down {
-  background-color: lightblue;
-  margin-left: 100px;
-}
-
 #left {
   float: left;
   background-color: lightblue;
